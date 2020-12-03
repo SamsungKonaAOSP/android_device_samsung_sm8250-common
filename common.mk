@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libcamera2ndk_vendor
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
