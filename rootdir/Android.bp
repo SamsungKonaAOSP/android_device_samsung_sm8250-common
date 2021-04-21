@@ -36,12 +36,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.usb.sh",
-    src: "bin/init.qcom.usb.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qti.dcvs.sh",
     src: "bin/init.qti.dcvs.sh",
     vendor: true,
@@ -87,13 +81,6 @@ prebuilt_etc {
     src: "etc/init.recovery.qcom.rc",
     sub_dir: "init",
     recovery: true,
-}
-
-prebuilt_etc {
-    name: "init.qcom.usb.rc",
-    src: "etc/init.qcom.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
 }
 
 prebuilt_etc {
