@@ -189,6 +189,7 @@ persist.vendor.radio.enableadvancedscan=true
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
 # USB
+sys.usb.mtp.batchcancel=true
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss
