@@ -320,6 +320,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.ramplus \
     fingerprint_common.rc \
+    init.qcom.power.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.samsung.bsp.rc \
