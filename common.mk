@@ -8,6 +8,8 @@ COMMON_PATH := device/samsung/sm8250-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
