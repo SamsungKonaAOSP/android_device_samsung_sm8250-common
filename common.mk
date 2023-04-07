@@ -291,6 +291,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+
 ifneq ($(TARGET_HAS_NO_RIL),true)
 # RIL
 PRODUCT_PACKAGES += \
