@@ -105,7 +105,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1.vendor \
+    vendor.lineage.health-service.default
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
