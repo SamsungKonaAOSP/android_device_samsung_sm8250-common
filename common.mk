@@ -291,6 +291,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.samsung
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
