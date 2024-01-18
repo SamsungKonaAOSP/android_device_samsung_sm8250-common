@@ -1029,7 +1029,7 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
-vendor/lib64/libsec-ril.so
+vendor/lib64/libsec-ril.so|3298a4818e1a2a42aaef90ac8ae53a1c2ea8ce3a
 vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libsystem_health_mon.so
