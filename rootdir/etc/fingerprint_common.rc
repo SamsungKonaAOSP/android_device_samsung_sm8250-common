@@ -1,10 +1,9 @@
-on boot
-# Fingerprint sensor
-    chmod 0660 /dev/esfp0
-    chown system system /dev/esfp0
-
+on early-init
     chmod 0660 /dev/goodix_fp
     chown system system /dev/goodix_fp
+
+    chmod 0660 /dev/esfp0
+    chown system system /dev/esfp0
 
     chmod 0660 /dev/qbt2000_fd
     chmod 0660 /dev/qbt2000_ipc
@@ -13,6 +12,8 @@ on boot
     chown system system /dev/qbt2000_ipc
     chown system system /dev/qbtspi
 
+on boot
+# Fingerprint sensor
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
