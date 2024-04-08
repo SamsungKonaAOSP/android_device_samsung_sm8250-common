@@ -61,8 +61,8 @@ odm                                                     /odm                   e
 /devices/platform/soc/8804000.sdhci/mmc_host*           auto                   vfat    defaults                                                                                               voldmanaged=sdcard:auto
 
 # Samsung ODE
-/dev/block/bootdevice/by-name/keydata	                /keydata	          ext4	   noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,inlinecrypt	  wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
-/dev/block/bootdevice/by-name/keyrefuge                	/keyrefuge	          ext4	   noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,inlinecrypt	  wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
+/dev/block/bootdevice/by-name/keydata	                /keydata	           ext4	   noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,inlinecrypt	  wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
+/dev/block/bootdevice/by-name/keyrefuge	                /keyrefuge	           ext4	   noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,inlinecrypt	  wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
 
 # Boot Image
 /dev/block/bootdevice/by-name/boot                      /boot                 emmc     defaults                                                                                               defaults
