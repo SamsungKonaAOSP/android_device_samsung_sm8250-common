@@ -76,10 +76,6 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libcamera2ndk_vendor
 
-# CAS
-PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore \
@@ -369,10 +365,7 @@ PRODUCT_PACKAGES += \
 # Tether
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    android.hardware.tetheroffload.config@1.0.vendor  \
-    android.hardware.tetheroffload.control@1.0.vendor
+    IPACM_cfg.xml
 
 # Thermal
 PRODUCT_PACKAGES += \
