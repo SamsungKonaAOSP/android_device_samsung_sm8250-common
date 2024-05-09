@@ -165,6 +165,9 @@ debug.stagefright.omx_default_rank=0
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+## Power HAL
+vendor.powerhal.disp.idle_support=false
+
 # USB
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
