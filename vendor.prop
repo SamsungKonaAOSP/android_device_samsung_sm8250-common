@@ -151,6 +151,9 @@ vendor.gralloc.disable_ubwc=0
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Keystore
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
