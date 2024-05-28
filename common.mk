@@ -31,7 +31,10 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libtinycompress \
     libvisualizer \
-    libvolumelistener
+    libvolumelistener \
+    SamsungDAP
+
+TARGET_EXCLUDES_AUDIOFX := true
 
 # Audio configs
 PRODUCT_COPY_FILES += \
