@@ -34,7 +34,10 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libtinycompress \
     libvisualizer \
-    libvolumelistener
+    libvolumelistener \
+    SamsungDAP
+
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
