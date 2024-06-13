@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudiopreprocessing \
+    libaudioroute.vendor \
     libbundlewrapper \
     libdownmix \
     libdynproc \
@@ -76,7 +77,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     libgui_vendor \
-    libcamera2ndk_vendor
+    libcamera2ndk_vendor \
+    libpng.vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -321,9 +323,13 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
+    libjsoncpp.vendor \
+    libnetutils.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
