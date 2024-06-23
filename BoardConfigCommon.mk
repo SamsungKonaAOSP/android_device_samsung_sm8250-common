@@ -75,6 +75,9 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     spu \
     dqmdbg
 
+# Include
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE         := 0x00000000
