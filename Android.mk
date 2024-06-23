@@ -37,14 +37,4 @@ $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(FIRMWARE_MDM_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
 
-WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
-$(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wifi firmware symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-
-ifeq ($(TARGET_HAS_QCACLD_WIFI),true)
-ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
-endif
-
 endif
