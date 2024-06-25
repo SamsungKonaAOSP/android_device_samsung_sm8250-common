@@ -327,6 +327,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.samsung
 
+# Updater
+AB_OTA_UPDATER := false
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti
