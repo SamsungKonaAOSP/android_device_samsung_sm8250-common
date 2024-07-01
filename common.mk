@@ -6,6 +6,9 @@
 
 COMMON_PATH := device/samsung/sm8250-common
 
+# Add common definitions for Samsung Qualcomm
+$(call inherit-product, $(COMMON_PATH)/rfs_symlinks.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
