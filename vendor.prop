@@ -159,9 +159,6 @@ ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak,sgak
 
-# Media
-debug.stagefright.omx_default_rank=0
-
 # NFC
 ro.vendor.nfc.info.antpos=1
 ro.vendor.nfc.support.advancedsetting=false
