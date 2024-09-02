@@ -265,8 +265,6 @@ vendor/lib64/libfocuspeaking.so
 vendor/lib64/libfocuspeaking_interface.so
 vendor/lib64/libhand_interaction.uniplugin@1.0.so
 vendor/lib64/libhandgesture.arcsoft.so
-vendor/lib64/libhdrdynamic.so;DISABLE_CHECKELF
-vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libheifcapture.so
 vendor/lib64/libimage_enhancement.arcsoft.so
 vendor/lib64/libimagecodec_native.quram.so
