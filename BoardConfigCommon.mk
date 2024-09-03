@@ -105,7 +105,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest.xml
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/compatibility_matrix.xml
 
 ifneq ($(TARGET_HAS_NO_RIL),true)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest_radio.xml
