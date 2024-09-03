@@ -135,8 +135,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO  := true
 TARGET_KERNEL_SOURCE         := kernel/samsung/sm8250
-TARGET_KERNEL_CONFIG         := vendor/kona-sec-perf_defconfig \
-                                vendor/debugfs.config
+TARGET_KERNEL_CONFIG         := vendor/kona-sec-perf_defconfig
 
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
