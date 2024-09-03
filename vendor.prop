@@ -169,7 +169,7 @@ debug.stagefright.omx_default_rank=0
 ro.vendor.extension_library=libqti-perfd-client.so
 
 ## Power HAL
-vendor.powerhal.disp.idle_support=true
+vendor.powerhal.disp.idle_support=false
 
 # Wifi
 wifi.aware.interface=wifi-aware0
