@@ -144,6 +144,13 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
+ifneq ($(TARGET_HAS_NO_RIL),true)
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_radio.prop
+ifneq ($(TARGET_IS_TABLET),true)
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_nfc.prop
+endif
+endif
+
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE      := true
 BOARD_INCLUDE_RECOVERY_DTBO  := true
@@ -176,6 +183,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+
+ifneq ($(TARGET_HAS_NO_RIL),true)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest_radio.xml
+endif
 
 # Inherit the proprietary files
 include vendor/samsung/sm8250-common/BoardConfigVendor.mk
