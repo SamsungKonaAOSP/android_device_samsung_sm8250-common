@@ -358,7 +358,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc \
-    wifi.rc
+    wifi_sec.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -147,8 +147,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "wifi.rc",
-    src: "etc/wifi.rc",
+    name: "wifi_sec.rc",
+    src: "etc/wifi_sec.rc",
     sub_dir: "init/",
     vendor: true,
 }

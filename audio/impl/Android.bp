@@ -149,8 +149,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@7.1-impl.samsung-sm7325",
-    defaults: ["android.hardware.audio-impl_samsung-sm7325"],
+    name: "android.hardware.audio@7.1-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@7.0",
         "android.hardware.audio@7.1",
