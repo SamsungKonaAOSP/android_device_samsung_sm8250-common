@@ -139,6 +139,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.samsung \
+    android.hardware.common-V1-ndk_platform.vendor
+
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap

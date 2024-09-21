@@ -98,6 +98,12 @@ TARGET_KERNEL_SOURCE         := kernel/samsung/sm8250
 TARGET_KERNEL_CONFIG         := vendor/kona-sec-perf_defconfig \
                                 vendor/debugfs.config
 
+ifeq ($(TARGET_HAS_UDFPS),true)
+# FOD
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.samsung-sm8250
+TARGET_USES_FOD_ZPOS := true
+endif
+
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
