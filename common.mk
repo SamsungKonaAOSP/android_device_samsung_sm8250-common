@@ -360,8 +360,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
-    init.audio.samsung.rc \
-    init.fingerprint.rc \
+    fingerprint_common.rc \
     init.qcom.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
