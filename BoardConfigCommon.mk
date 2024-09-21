@@ -75,6 +75,12 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     spu \
     dqmdbg
 
+ifeq ($(TARGET_HAS_UDFPS),true)
+# FOD
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.samsung-sm8250
+TARGET_USES_FOD_ZPOS := true
+endif
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE         := 0x00000000
