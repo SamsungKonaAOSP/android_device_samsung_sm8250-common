@@ -82,6 +82,20 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     spu \
     dqmdbg
 
+# HIDL manifests
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(COMMON_PATH)/configs/framework_compatibility_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
+
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+
+ifneq ($(TARGET_HAS_NO_RIL),true)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest_radio.xml
+endif
+
 # Include
 $(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
 
@@ -169,13 +183,12 @@ endif
 endif
 
 # Recovery
-BOARD_HAS_DOWNLOAD_MODE        := true
-BOARD_INCLUDE_RECOVERY_DTBO    := true
-TARGET_RECOVERY_FSTAB          := $(COMMON_PATH)/recovery/root/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT   := RGBX_8888
-TARGET_USERIMAGES_USE_EXT4     := true
-TARGET_USERIMAGES_USE_F2FS     := true
-BOARD_USES_FULL_RECOVERY_IMAGE := true
+BOARD_HAS_DOWNLOAD_MODE      := true
+BOARD_INCLUDE_RECOVERY_DTBO  := true
+TARGET_RECOVERY_FSTAB        := $(COMMON_PATH)/recovery/root/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4   := true
+TARGET_USERIMAGES_USE_F2FS   := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm8250
@@ -189,9 +202,9 @@ VENDOR_SECURITY_PATCH := 2024-07-01
 
 # SePolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS    += $(COMMON_PATH)/sepolicy/vendor
+PRODUCT_PUBLIC_SEPOLICY_DIRS  += $(COMMON_PATH)/sepolicy/public
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Verified Boot
 BOARD_AVB_ENABLE                           := true
