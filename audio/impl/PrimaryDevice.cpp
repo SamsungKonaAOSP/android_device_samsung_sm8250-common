@@ -21,8 +21,6 @@
 
 #include <cutils/properties.h>
 #include <string.h>
-#include <chrono>
-#include <thread>
 
 #if MAJOR_VERSION >= 4
 #include <cmath>
@@ -229,7 +227,6 @@ Return<Result> PrimaryDevice::setMode(AudioMode mode) {
     // Wait until one sim slot reports a call
     if (mode == AudioMode::IN_CALL) {
         while (strcmp(simSlot1, "0") == 0 && strcmp(simSlot2, "0") == 0) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(50));
             property_get("vendor.calls.ongoing0", simSlot1, "");
             property_get("vendor.calls.ongoing1", simSlot2, "");
         }
