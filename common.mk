@@ -125,6 +125,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Fstab
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.ramdisk
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
