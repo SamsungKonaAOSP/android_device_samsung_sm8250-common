@@ -150,6 +150,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
