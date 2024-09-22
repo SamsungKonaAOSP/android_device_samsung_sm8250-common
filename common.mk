@@ -107,6 +107,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss@2.1.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
@@ -129,9 +135,18 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster4_1support.vendor
 
+# Minijail
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
+
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -149,6 +164,10 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -192,6 +211,11 @@ PRODUCT_PACKAGES += \
     libipanat \
     android.hardware.tetheroffload.config@1.0.vendor  \
     android.hardware.tetheroffload.control@1.0.vendor
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor \
+    android.frameworks.cameraservice.service@2.1.vendor
 
 # USB
 PRODUCT_PACKAGES += \
