@@ -145,5 +145,15 @@ vendor.display.idle_time=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 
+# RIL
+ro.radio.noril=no
+ro.telephony.default_cdma_sub=0
+ro.vendor.epdg.support=true
+ro.vendor.use_data_netmgrd=false
+ro.vendor.sec.radio.def_network=9
+persist.vendor.radio.atfwd.start=true
+persist.vendor.radio.enableadvancedscan=true
+vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+
 # Wifi
 wifi.aware.interface=wifi-aware0
