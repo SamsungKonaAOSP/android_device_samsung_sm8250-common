@@ -255,6 +255,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+ifneq ($(TARGET_IS_TABLET),true)
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
+endif
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
