@@ -93,5 +93,12 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
+# Recovery
+BOARD_HAS_DOWNLOAD_MODE      := true
+BOARD_INCLUDE_RECOVERY_DTBO  := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4   := true
+TARGET_USERIMAGES_USE_F2FS   := true
+
 # Inherit the proprietary files
 include vendor/samsung/sm8250-common/BoardConfigVendor.mk
