@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     librilutils \
     librmnetctl \
-    secril_config_svc
+    secril_config_svc \
+    sehradiomanager
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
