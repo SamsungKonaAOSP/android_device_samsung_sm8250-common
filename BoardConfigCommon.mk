@@ -24,5 +24,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER         := true
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_VENDOR             := samsung
+TARGET_BOARD_PLATFORM    := kona
+
 # Inherit the proprietary files
 include vendor/samsung/sm8250-common/BoardConfigVendor.mk
