@@ -124,6 +124,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Fstab
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.ramdisk
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
@@ -255,6 +260,31 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     secril_config_svc \
     sehradiomanager
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.dcvs.sh
+
+PRODUCT_PACKAGES += \
+    fstab.ramplus \
+    fingerprint_common.rc \
+    init.qcom.rc \
+    init.samsung.bsp.rc \
+    init.samsung.display.rc \
+    init.samsung.eif.rc \
+    init.samsung.rc \
+    init.target.rc \
+    init.vendor.onebinary.rc \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc \
+    init.vendor.sensors.rc \
+    ueventd.qcom.rc \
+    wifi_sec.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
