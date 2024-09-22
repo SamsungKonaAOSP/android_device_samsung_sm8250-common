@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
     libdrmclearkeyplugin \
     android.hardware.drm@1.3.vendor
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
