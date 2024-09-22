@@ -100,5 +100,14 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4   := true
 TARGET_USERIMAGES_USE_F2FS   := true
 
+# Verified Boot
+BOARD_AVB_ENABLE                           := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS           += --flags 3
+BOARD_AVB_ROLLBACK_INDEX                   := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_RECOVERY_KEY_PATH                := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_RECOVERY_ALGORITHM               := SHA256_RSA4096
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX          := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
 # Inherit the proprietary files
 include vendor/samsung/sm8250-common/BoardConfigVendor.mk
