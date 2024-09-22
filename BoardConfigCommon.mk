@@ -28,6 +28,22 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER         := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
+BOARD_ROOT_EXTRA_FOLDERS += \
+    carrier \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    misc \
+    omr \
+    optics \
+    prism \
+    spu \
+    dqmdbg
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE         := 0x00000000
