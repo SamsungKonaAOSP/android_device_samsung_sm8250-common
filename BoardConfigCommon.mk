@@ -176,5 +176,32 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
+ifeq ($(TARGET_HAS_BCM_WIFI),true)
+## Broadcom Wi-Fi
+BOARD_WLAN_BCMDHD_SAE             := true
+BOARD_WLAN_DEVICE                 := bcmdhd
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
+WIFI_FEATURE_HOSTAPD_11AX         := true
+endif
+
+ifeq ($(TARGET_HAS_QCACLD_WIFI),true)
+# Qualcomm Wi-Fi
+BOARD_WLAN_DEVICE                := qcwcn
+CONFIG_IEEE80211AX               := true
+WIFI_DRIVER_DEFAULT              := qca_cld3
+WIFI_DRIVER_STATE_CTRL_PARAM     := "/dev/wlan"
+WIFI_DRIVER_STATE_OFF            := "OFF"
+WIFI_DRIVER_STATE_ON             := "ON"
+endif
+
+# Common Wi-fi
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+
 # Inherit the proprietary files
 include vendor/samsung/sm8250-common/BoardConfigVendor.mk
