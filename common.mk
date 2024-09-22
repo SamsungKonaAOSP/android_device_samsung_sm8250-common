@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -126,6 +130,24 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Tether
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    android.hardware.tetheroffload.config@1.0.vendor  \
+    android.hardware.tetheroffload.control@1.0.vendor
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    libwifi-hal \
+    libwpa_client \
+    wpa_cli \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/sm8250-common/sm8250-common-vendor.mk)
