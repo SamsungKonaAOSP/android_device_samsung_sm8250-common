@@ -144,3 +144,6 @@ vendor.display.idle_time_inactive=0
 vendor.display.idle_time=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
+
+# Wifi
+wifi.aware.interface=wifi-aware0
