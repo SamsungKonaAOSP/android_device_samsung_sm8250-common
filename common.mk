@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster4_1support.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
+
 # Minijail
 PRODUCT_PACKAGES += \
     libavservices_minijail \
