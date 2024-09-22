@@ -102,6 +102,15 @@ vendor.qcom.bluetooth.soc=hastings
 camera.disable_zsl_mode=1
 ro.camera.notify_nfc=1
 
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.options=::v2
+
+# Dalvik VM
+dalvik.vm.lockprof.threshold=500
+
 # Display
 debug.egl.hw=0
 debug.mdpcomp.logs=0
@@ -152,6 +161,22 @@ ro.hardware.gatekeeper=mdfpp
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak,sgak
+
+# Media
+debug.stagefright.omx_default_rank=0
+
+# NFC
+ro.vendor.nfc.info.antpos=1
+ro.vendor.nfc.support.advancedsetting=false
+ro.vendor.nfc.support.autoselect=true
+ro.vendor.nfc.support.defaultaid=true
+ro.vendor.nfc.support.ese=true
+ro.vendor.nfc.support.nonaid=true
+ro.vendor.nfc.support.othercategory=true
+ro.vendor.nfc.support.uicc=true
+
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
 
 ## Power HAL
 vendor.powerhal.disp.idle_support=false
