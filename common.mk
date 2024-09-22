@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
@@ -118,6 +122,12 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    android.hardware.keymaster@4.1.vendor \
+    libkeymaster4_1support.vendor
 
 # Net
 PRODUCT_PACKAGES += \
