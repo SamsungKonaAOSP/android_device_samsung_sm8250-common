@@ -101,6 +101,9 @@ TARGET_KERNEL_SOURCE         := kernel/samsung/sm8250
 TARGET_KERNEL_CONFIG         := vendor/kona-sec-perf_defconfig \
                                 vendor/debugfs.config
 
+# Keymaster
+TARGET_KEYMASTER_VARIANT := samsung
+
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE  := 2000000000
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE  := 2000000000
