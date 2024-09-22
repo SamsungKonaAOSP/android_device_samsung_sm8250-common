@@ -328,9 +328,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
-    libipanat \
-    android.hardware.tetheroffload.config@1.0.vendor  \
-    android.hardware.tetheroffload.control@1.0.vendor
+    libipanat
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -358,6 +356,29 @@ PRODUCT_PACKAGES += \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
+
+ifeq ($(TARGET_HAS_BCM_WIFI),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/bcm/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+endif
+
+ifeq ($(TARGET_HAS_QCACLD_WIFI),true)
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor  \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    wifi_qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/qcacld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/configs/wifi/qcacld/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+endif
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/sm8250-common/sm8250-common-vendor.mk)

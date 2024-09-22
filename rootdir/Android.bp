@@ -160,6 +160,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "wifi_qcom.rc",
+    src: "etc/wifi_qcom.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "wifi_sec.rc",
     src: "etc/wifi_sec.rc",
     sub_dir: "init/",
