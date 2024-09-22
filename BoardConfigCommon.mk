@@ -47,6 +47,18 @@ BOARD_USES_ALSA_AUDIO                          := true
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER         := true
 
+# Display
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
+TARGET_USES_DISPLAY_RENDER_INTENTS      := true
+TARGET_USES_DRM_PP                      := true
+TARGET_USES_GRALLOC1                    := true
+TARGET_USES_GRALLOC4                    := true
+TARGET_USES_HWC2                        := true
+TARGET_USES_ION                         := true
+TARGET_USES_QCOM_DISPLAY_BSP            := true
+TARGET_USES_QTI_MAPPER_2_0              := true
+TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1   := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
