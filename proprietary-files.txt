@@ -1,5 +1,8 @@
 # All blobs are from G780GXXSCEXI1 (T), unless pinned
 
+# libOmxVpp depends on libOmxCore, which is a GNU makefile target
+# lowi-server depends on libwpa_client, which is a GNU makefile target
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc
@@ -116,8 +119,7 @@ vendor/lib64/soundfx/libswspatializer.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so;DISABLE_CHECKELF
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
@@ -271,7 +273,7 @@ vendor/lib64/libimagecodec_native.quram.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libjpegQtable_interface.so
 vendor/lib64/libloadalgo_stub.so
-vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmultiobject_tracker.so
@@ -464,10 +466,10 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Fingerprint
 vendor/lib/libegis_fp_normal_sensor_test.so
-vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
-vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
 
 # Firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -495,7 +497,7 @@ vendor/firmware/cs40l25a_exc.bin
 # GNSS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/xtra-daemon
 vendor/etc/flp.conf
 vendor/etc/gnss_antenna_info.conf
@@ -632,10 +634,10 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVpp.so
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
@@ -651,10 +653,10 @@ vendor/lib64/libOmxApeDec.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libdeccfg.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
