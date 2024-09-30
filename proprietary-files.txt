@@ -46,7 +46,7 @@ vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/lib_SoundAlive_play_plus_ver400.so
+vendor/lib/lib_SoundAlive_play_plus_ver400.so;DISABLE_CHECKELF
 vendor/lib/lib_SoundBooster_ver1050.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libadm.so
@@ -75,7 +75,7 @@ vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib64/lib_SoundAlive_play_plus_ver400.so
+vendor/lib64/lib_SoundAlive_play_plus_ver400.so;DISABLE_CHECKELF
 vendor/lib64/lib_SoundBooster_ver1050.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
@@ -241,7 +241,7 @@ vendor/lib64/libarcsoft_aieffectpk_video_plight.so
 vendor/lib64/libarcsoft_deflicker_native.so
 vendor/lib64/libarcsoft_dualcam_portraitlighting.so
 vendor/lib64/libarcsoft_dualcam_portraitlighting_preview.so
-vendor/lib64/libarcsoft_multi_frame_video_hdr.so
+vendor/lib64/libarcsoft_multi_frame_video_hdr.so;DISABLE_CHECKELF
 vendor/lib64/libarcsoft_object_tracking.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
@@ -265,7 +265,7 @@ vendor/lib64/libfocuspeaking.so
 vendor/lib64/libfocuspeaking_interface.so
 vendor/lib64/libhand_interaction.uniplugin@1.0.so
 vendor/lib64/libhandgesture.arcsoft.so
-vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamic.so;DISABLE_CHECKELF
 vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libheifcapture.so
 vendor/lib64/libimage_enhancement.arcsoft.so
