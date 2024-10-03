@@ -72,15 +72,9 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_ROOT_EXTRA_FOLDERS += \
     carrier \
     efs \
-    keydata \
-    keyrefuge \
-    metadata \
-    misc \
-    omr \
     optics \
     prism \
-    spu \
-    dqmdbg
+    spu
 
 ifeq ($(TARGET_HAS_UDFPS),true)
 # FOD
