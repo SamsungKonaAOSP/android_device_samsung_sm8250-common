@@ -265,6 +265,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
