@@ -154,6 +154,13 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
+ifneq ($(TARGET_HAS_NO_RIL),true)
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_radio.prop
+ifneq ($(TARGET_IS_TABLET),true)
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_nfc.prop
+endif
+endif
+
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE      := true
 BOARD_INCLUDE_RECOVERY_DTBO  := true
@@ -168,7 +175,9 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm8250
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # RIL
+ifneq ($(TARGET_HAS_NO_RIL),true)
 ENABLE_VENDOR_RIL_SERVICE := true
+endif
 
 # Security patch
 VENDOR_SECURITY_PATCH := 2024-08-01
@@ -195,6 +204,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+
+ifneq ($(TARGET_HAS_NO_RIL),true)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_radio.xml
+endif
 
 ifeq ($(TARGET_HAS_BCM_WIFI),true)
 ## Broadcom Wi-Fi
