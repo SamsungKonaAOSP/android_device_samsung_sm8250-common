@@ -103,9 +103,8 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
 
 on post-fs
-# set RLIMIT_MEMLOCK to 64MB
+    # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
-
     write /dev/ipa 1
 
 on late-fs
@@ -113,7 +112,7 @@ on late-fs
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
-# Enable WLAN cold boot calibration
+    # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
 
 # for WIFI MAC address
@@ -178,10 +177,10 @@ on property:ro.boot.debug_level=0x494d
     setprop vendor.fastrpc.debug.trace 1
 
 on property:vendor.display.lcd_density=560
-    setprop dalvik.vm.heapgrowthlimit 256m
+   setprop dalvik.vm.heapgrowthlimit 256m
 
 on property:vendor.display.lcd_density=640
-    setprop dalvik.vm.heapgrowthlimit 512m
+   setprop dalvik.vm.heapgrowthlimit 512m
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
@@ -195,18 +194,18 @@ on charger
     setprop sys.usb.configfs 1
 
 service vendor.lowi /vendor/bin/sscrpcd
-    class core
-    user system
-    group system wakelock
-    capabilities BLOCK_SUSPEND
+   class core
+   user system
+   group system wakelock
+   capabilities BLOCK_SUSPEND
 
-# pd-mapper
+#pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
     group system
 
-# Peripheral manager
+#Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
@@ -242,4 +241,4 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     oneshot
 
 on property:vendor.dcvs.prop=1
-    start dcvs-sh
+   start dcvs-sh

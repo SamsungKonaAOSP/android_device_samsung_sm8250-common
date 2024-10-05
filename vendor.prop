@@ -66,7 +66,6 @@ vendor.audio.feature.usb_offload.enable=true
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
-bluetooth.device.default_name=Galaxy S20 FE
 bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.asha.central.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
@@ -99,13 +98,9 @@ ro.soc.model=SM8250
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
-ro.crypto.metadata_init_delete_all_keys.enabled=false
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.volume.options=::v2
-
-# Dalvik VM
-dalvik.vm.lockprof.threshold=500
 
 # Display
 debug.egl.hw=0
@@ -150,9 +145,6 @@ vendor.display.idle_time=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 
-# Filesystem
-fs_mgr.overlayfs.prefer_cache_backing_storage=true
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
@@ -168,7 +160,6 @@ ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak,sgak
 
 # Media
-debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 
 # NFC
@@ -184,7 +175,7 @@ ro.vendor.nfc.support.uicc=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-## Power HAL
+# Power HAL
 vendor.powerhal.disp.idle_support=false
 
 # RIL
@@ -196,6 +187,10 @@ ro.vendor.sec.radio.def_network=9
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.enableadvancedscan=true
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+
+# USB
+vendor.usb.diag.func.name=diag
+vendor.usb.use_ffs_mtp=0
 
 # Wifi
 wifi.aware.interface=wifi-aware0
