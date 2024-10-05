@@ -217,6 +217,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
+ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     init.nfc.samsung.rc
 
@@ -226,6 +227,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
+endif
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -303,8 +305,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # PowerShare
+ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.samsung
+endif
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -328,6 +332,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor
 
 # RIL
+ifneq ($(TARGET_HAS_NO_RIL),true)
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     android.hardware.radio@1.5.vendor \
@@ -340,6 +345,13 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     secril_config_svc \
     sehradiomanager
+
+PRODUCT_PACKAGES += \
+    init.vendor.onebinary.rc \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc
+
+endif # TARGET_HAS_NO_RIL
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -361,9 +373,6 @@ PRODUCT_PACKAGES += \
     init.samsung.eif.rc \
     init.samsung.rc \
     init.target.rc \
-    init.vendor.onebinary.rc \
-    init.vendor.rilchip.rc \
-    init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc \
     wifi_sec.rc
