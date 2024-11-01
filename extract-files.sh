@@ -81,6 +81,10 @@ function blob_fixup() {
             mv "${2}".patched "${2}"
             sed -i 's/ril.dds.call.ongoing/vendor.calls.slot_id/g' "${2}"
             ;;
+        vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         vendor/lib64/hw/gatekeeper.mdfpp.so|vendor/lib64/libkeymaster_helper.so|vendor/lib64/libskeymaster4device.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
