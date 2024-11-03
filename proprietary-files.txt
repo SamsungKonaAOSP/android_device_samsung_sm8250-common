@@ -691,7 +691,7 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 # Gatekeeper
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-mdfpp.rc:vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
-vendor/lib64/hw/gatekeeper.mdfpp.so|c9d435865554978ce5dc255b555e2368599f621b
+vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -745,7 +745,7 @@ vendor/lib/libspcom.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
--vendor/lib64/libskeymaster4device.so|8d67e6b59bba0c5a7a7fc8c08fb3ab1a07e157c4
+-vendor/lib64/libskeymaster4device.so
 vendor/lib64/libspcom.so
 
 # Latency
