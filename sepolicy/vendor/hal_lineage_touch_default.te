@@ -1,0 +1,3 @@
+#============= hal_lineage_touch_default ==============
+allow hal_lineage_touch_default vendor_sysfs_touchscreen:dir search;
+allow hal_lineage_touch_default vendor_sysfs_touchscreen_writable:file { getattr open read write };

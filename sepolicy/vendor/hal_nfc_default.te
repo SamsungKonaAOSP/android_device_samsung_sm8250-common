@@ -1,0 +1,2 @@
+#============= hal_nfc_default ==============
+allow hal_nfc_default vendor_sec_nfc_prop:file { getattr map open read };

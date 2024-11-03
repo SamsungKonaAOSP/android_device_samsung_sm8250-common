@@ -1,0 +1,9 @@
+#============= kernel ==============
+allow kernel spu_file:dir { ioctl read getattr lock open watch watch_reads search };
+allow kernel spu_file:file { ioctl read getattr lock map open watch watch_reads };
+allow kernel spu_file:lnk_file { ioctl read getattr lock map open watch watch_reads };
+
+allow kernel vendor_sysfs_sensors:file { open read };
+
+allow kernel debug_block_device:blk_file { ioctl read write getattr lock append map open watch watch_reads };
+allow kernel paramblk_device:blk_file { ioctl read write getattr lock append map open watch watch_reads };

@@ -1,0 +1,64 @@
+# Audio
+type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
+type vendor_audiopcm_data_file, file_type, data_file_type;
+
+# Battery
+type vendor_sysfs_battery, fs_type, sysfs_type;
+
+# Blutooth
+type vendor_convergence_data_file, file_type, data_file_type;
+
+# GNSS
+type vendor_gnss_data_file, file_type, data_file_type;
+
+# Camera
+type vendor_sysfs_camera_writable, fs_type, sysfs_type;
+
+# Display
+type vendor_sysfs_display, fs_type, sysfs_type;
+type vendor_sysfs_mdnie, fs_type, sysfs_type;
+
+# EFS
+type app_efs_file, file_type;
+type battery_efs_file, file_type;
+type camera_efs_file, file_type;
+type dak_efs_file, file_type;
+type imei_efs_file, file_type;
+type sec_efs_file, file_type;
+
+# Fingerprint
+type vendor_biometrics_data_file, file_type, data_file_type;
+
+# Gatekeeper
+type vendor_gatekeeper_data_file, file_type, data_file_type;
+
+# Secril
+# type vendor_radio_vendor_data_file, file_type, data_file_type;
+
+# Input
+type proc_bus_input, fs_type, proc_type;
+type vendor_sysfs_input, fs_type, sysfs_type;
+
+# Proc
+type proc_last_kmsg, fs_type, proc_type;
+type proc_simslot_count, fs_type, proc_type;
+
+# Sensor
+# type vendor_sysfs_sensors, fs_type, sysfs_type;
+
+# Thermal
+type vendor_sysfs_thermal, fs_type, sysfs_type;
+
+# Touchscreen
+type vendor_sysfs_touchscreen, fs_type, sysfs_type;
+type vendor_sysfs_touchscreen_writable, fs_type, sysfs_type;
+
+type carrier_file, fs_type;
+allow carrier_file labeledfs:filesystem associate;
+
+type omr_file, fs_type;
+allow omr_file labeledfs:filesystem associate;
+
+type spu_file, fs_type;
+allow spu_file labeledfs:filesystem associate;
+

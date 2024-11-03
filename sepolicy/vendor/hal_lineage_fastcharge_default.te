@@ -1,0 +1,4 @@
+allow hal_lineage_fastcharge_default init:unix_stream_socket connectto;
+allow hal_lineage_fastcharge_default property_socket:sock_file write;
+allow hal_lineage_fastcharge_default sysfs:file { getattr open read write };
+# allow hal_lineage_fastcharge_default vendor_default_prop:property_service set;

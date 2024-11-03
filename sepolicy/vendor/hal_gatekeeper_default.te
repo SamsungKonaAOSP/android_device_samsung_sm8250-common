@@ -1,0 +1,2 @@
+#============= hal_gatekeeper_default ==============
+allow hal_gatekeeper_default vendor_gatekeeper_data_file:dir { ioctl read getattr lock open watch watch_reads search };

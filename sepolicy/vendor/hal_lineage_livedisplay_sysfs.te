@@ -1,0 +1,6 @@
+#============= hal_lineage_livedisplay_sysfs ==============
+allow hal_lineage_livedisplay_sysfs { vendor_sysfs_display vendor_sysfs_mdnie }:dir search;
+allow hal_lineage_livedisplay_sysfs { vendor_sysfs_display vendor_sysfs_mdnie }:file { getattr open read write };
+
+allow hal_lineage_livedisplay_sysfs vendor_display_vendor_data_file:dir search;
+allow hal_lineage_livedisplay_sysfs vendor_display_vendor_data_file:file { getattr open read };
