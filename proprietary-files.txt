@@ -47,20 +47,14 @@ vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_SoundAlive_play_plus_ver400.so
 vendor/lib/lib_SoundBooster_ver1050.so
 vendor/lib/lib_soundaliveresampler.so
-vendor/lib/liba2dpoffload.so
 vendor/lib/libadm.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libcirrusspkrprot.so
-vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmiedid.so
 vendor/lib/libhdmipassthru.so
-vendor/lib/libhfp.so
 vendor/lib/libmulawdec.so
 vendor/lib/librecordalive.so
 vendor/lib/libprofileparamstorage.so
@@ -69,10 +63,8 @@ vendor/lib/libsamsungVoipResampler.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libsmwrapper.so
-vendor/lib/libsndmonitor.so
 vendor/lib/libspatializerparamstorage.so
 vendor/lib/libspeakercalibration.so
-vendor/lib/libspkrprot.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
@@ -601,7 +593,7 @@ vendor/lib/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterutils.so
 vendor/lib/libqtikeymaster4.so
 vendor/lib/libspcom.so
--vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libkeymaster_helper.so;DISABLE_ELFCHECK
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
@@ -825,7 +817,7 @@ vendor/lib64/libnlnetmgr.so|c53116f943cd4b557a27571695ef4db6442814c5
 vendor/lib64/libril_sem.so|8f20c6dd8d2b8537b50052b7bbf416d1843f4677
 vendor/lib64/libsec_semRil.so|c59b00a3bb037df8f12cd4c5531ab41246e0130a
 vendor/lib64/libsec-ril.so|6063ba231fefa674172f466a75f6498c58619c86
-vendor/lib64/libsecril-client.so|1614f75c6a98e1a4b3ca6a757dd6391b2efeb519
+vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor|1614f75c6a98e1a4b3ca6a757dd6391b2efeb519
 vendor/lib64/libshsc.so|dc602c76de5e853d84306bb00ee5ea3f603be19a
 vendor/lib64/libsemnativecarrierfeature.so|67b1e1c16c6f87631c715ea17eac4b5a07cde05e
 vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|47690b36bf2846efd407f65ebb1d13086509c6e1
@@ -833,7 +825,6 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|1e546c9440e9373543e8
 vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|adfd9e42d88a1d3daf9c1112b060cf4f5eb7ea1b
 vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|b062f04d2d5a8ea1e21fc6602c534b042532ec07
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|05cb51696937cbb16b2bb4b23478b50465b21a48
-vendor/lib64/vendor.samsung.hardware.radio.network-V1-ndk.so|071ed43e68cdcf73e39a95555e985d9dd350bee6
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|86303fe6ba1625fee3998d463b2679c03eb41416
 
 # RemoteFS
