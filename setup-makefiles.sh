@@ -43,7 +43,8 @@ function lib_to_package_fixup_vendor_variants() {
 
     case "$1" in
         com.qualcomm.qti.ant@1.0 | \
-            libmmosal)
+            libmmosal | \
+            libsecril-client)
             echo "$1_vendor"
             ;;
         libOmxCore | \

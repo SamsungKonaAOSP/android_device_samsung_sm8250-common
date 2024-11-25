@@ -119,7 +119,7 @@ vendor/lib64/soundfx/libswspatializer.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/com.qualcomm.qti.ant@1.0.so;DISABLE_CHECKELF
+vendor/lib64/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
@@ -803,7 +803,7 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libsec_semRil.so
-vendor/lib64/libsecril-client.so
+vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
