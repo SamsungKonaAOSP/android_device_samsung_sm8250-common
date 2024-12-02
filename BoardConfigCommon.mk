@@ -78,7 +78,7 @@ BOARD_ROOT_EXTRA_FOLDERS += \
     spu
 
 # FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.samsung-sm8250
+TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/samsung:libudfps_extension.samsung
 TARGET_USES_FOD_ZPOS := true
 
 # Include
